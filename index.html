@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="data:," />
+<title>大濠高校吹奏楽部 57年の記録 1970–2026｜ショータイトルと大会結果</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{
+--bg:#f2f4f7; --panel:#ffffff; --panel2:#e9edf2;
+--ink:#10151d; --ink2:#3c4656; --muted:#6b7686;
+--line:#d3dae3; --line2:#b9c3d0;
+--crimson:#9d1b30; --crimson-ink:#9d1b30;
+--navy:#14213d;
+--gold:#a8740a; --gold-bg:#f3e3bb; --gold-ink:#5f4203;
+--silver-bg:#dde3ec; --silver-ink:#3c4656;
+--unk:#8a93a1;
+--chip:#ffffff;
+--shadow:0 1px 2px rgba(16,21,29,.06),0 4px 14px rgba(16,21,29,.05);
+}
+@media (prefers-color-scheme: dark){
+:root{
+--bg:#0b0f14; --panel:#141a22; --panel2:#1a222d;
+--ink:#e9edf3; --ink2:#b9c2cf; --muted:#8a95a5;
+--line:#26303d; --line2:#374454;
+--crimson:#e05575; --crimson-ink:#f0839c;
+--navy:#8fb0e8;
+--gold:#d9a83c; --gold-bg:#3a2f10; --gold-ink:#f0cd7e;
+--silver-bg:#2a3442; --silver-ink:#c3ccd9;
+--unk:#6e7989;
+--chip:#141a22;
+--shadow:0 1px 2px rgba(0,0,0,.4),0 4px 14px rgba(0,0,0,.3);
+}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+margin:0;background:var(--bg);color:var(--ink);
+font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+font-size:16px;line-height:1.75;-webkit-text-size-adjust:100%;
+}
+.lat{font-family:"Oswald","Zen Kaku Gothic New",sans-serif}
+a{color:var(--crimson-ink)}
+.wrap{max-width:1060px;margin:0 auto;padding:0 18px 72px}
+
+/* ---------- header ---------- */
+header{padding:44px 0 8px}
+.kicker{
+display:flex;align-items:center;gap:12px;color:var(--crimson-ink);
+font-weight:900;font-size:13px;letter-spacing:.14em;
+}
+.kicker::after{content:"";flex:1;height:2px;background:var(--crimson)}
+h1{
+margin:14px 0 6px;font-weight:900;line-height:1.25;
+font-size:clamp(27px,5.4vw,44px);letter-spacing:.01em;
+}
+h1.yrs{color:var(--crimson-ink);white-space:nowrap}
+.lead{color:var(--ink2);font-size:clamp(15px,2.6vw,17px);max-width:46em;margin:10px 0 0}
+.lead strong{color:var(--ink)}
+.meta{margin-top:14px;color:var(--muted);font-size:13px}
+
+/* ---------- stat tiles ---------- */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:26px 0 6px}
+.stat{background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--navy);padding:14px 14px 10px;box-shadow:var(--shadow)}
+.stat.red{border-top-color:var(--crimson)}
+.stat.num{font-family:"Oswald",sans-serif;font-weight:700;font-size:clamp(26px,4.6vw,38px);line-height:1.05}
+.stat.num small{font-size:.5em;font-weight:600;color:var(--ink2)}
+.stat.cap{font-size:12.5px;color:var(--ink2);line-height:1.55;margin-top:5px}
+@media (max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+/* ---------- alert / discrepancy ---------- */
+.alert{
+margin:18px 0 0;background:var(--panel);border:1px solid var(--line);
+border-left:6px solid var(--crimson);padding:16px 18px;box-shadow:var(--shadow);
+}
+.alert h2{margin:0 0 6px;font-size:17px;font-weight:900}
+.alert p{margin:0;color:var(--ink2);font-size:14.5px}
+.alert p+p{margin-top:6px}
+.alert strong{color:var(--ink)}
+
+/* ---------- toolbar ---------- */
+.toolbar{
+position:sticky;top:0;z-index:20;margin:30px -18px 0;padding:12px 18px;
+background:var(--bg);border-bottom:2px solid var(--line2);
+}
+.toolbar.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.search{
+flex:1 1 210px;display:flex;align-items:center;gap:8px;background:var(--panel);
+border:1.5px solid var(--line2);padding:0 12px;min-height:44px;
+}
+.search svg{flex:none;color:var(--muted)}
+.search input{
+border:0;outline:0;background:transparent;color:var(--ink);
+font:inherit;font-size:15px;width:100%;min-height:42px;
+}
+.chip{
+appearance:none;border:1.5px solid var(--line2);background:var(--chip);color:var(--ink2);
+font:inherit;font-weight:700;font-size:13.5px;padding:9px 13px;cursor:pointer;min-height:44px;
+}
+.chip[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+@media (prefers-color-scheme: dark){.chip[aria-pressed="true"]{background:#2c4a7c;border-color:#2c4a7c}}
+.eras{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;font-size:13px;font-weight:700}
+.eras a{color:var(--ink2);text-decoration:none;border-bottom:2px solid var(--line2);padding-bottom:1px}
+.eras a:hover{color:var(--crimson-ink);border-color:var(--crimson)}
+.count{font-size:13px;color:var(--muted);margin-top:8px}
+
+/* ---------- sections ---------- */
+section{margin-top:44px}
+.sec-head{display:flex;align-items:baseline;gap:14px;border-bottom:3px solid var(--ink);padding-bottom:8px}
+.sec-head h2{margin:0;font-size:clamp(20px,3.6vw,26px);font-weight:900}
+.sec-head.range{font-family:"Oswald",sans-serif;font-weight:600;color:var(--crimson-ink);font-size:clamp(15px,2.6vw,19px);letter-spacing:.06em}
+.sec-note{color:var(--ink2);font-size:14px;margin:10px 0 0;max-width:48em}
+
+/* ---------- year cards ---------- */
+.card{
+background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);
+margin-top:14px;display:grid;grid-template-columns:104px 1fr;overflow:hidden;
+}
+.card.yr{
+background:var(--panel2);border-right:1px solid var(--line);
+padding:16px 10px;text-align:center;
+}
+.card.yr.y{font-family:"Oswald",sans-serif;font-weight:700;font-size:30px;line-height:1.05}
+.card.yr.era{font-size:11px;color:var(--muted);margin-top:4px;line-height:1.4}
+.card.body{padding:14px 16px 12px;min-width:0}
+.showline{display:flex;align-items:flex-start;gap:10px;flex-wrap:wrap}
+.show{
+font-weight:900;font-size:clamp(20px,3.8vw,27px);line-height:1.3;letter-spacing:.01em;
+}
+.show.lat{font-family:"Oswald","Zen Kaku Gothic New",sans-serif;font-weight:600;letter-spacing:.02em}
+.show.none{color:var(--unk);font-size:17px;font-weight:700}
+.badge{
+flex:none;font-size:12px;font-weight:900;padding:3px 10px;margin-top:5px;
+border:1.5px solid var(--line2);color:var(--ink2);background:var(--panel2);
+}
+.badge.gold{background:var(--gold-bg);border-color:var(--gold);color:var(--gold-ink)}
+.badge.silver{background:var(--silver-bg);border-color:var(--line2);color:var(--silver-ink)}
+.badge.special{background:var(--crimson);border-color:var(--crimson);color:#fff}
+.badge.pending{border-style:dashed;color:var(--crimson-ink);border-color:var(--crimson);background:transparent}
+.showalt{font-size:13px;color:var(--crimson-ink);font-weight:700;margin-top:2px}
+.results{margin-top:10px;display:grid;gap:7px}
+.rrow{display:grid;grid-template-columns:118px 1fr;gap:10px;font-size:14.5px}
+.rrow.lab{
+font-size:11.5px;font-weight:900;color:var(--ink2);letter-spacing:.04em;
+border-top:2px solid var(--ink);padding-top:3px;line-height:1.5;
+}
+.rrow.val{color:var(--ink);border-top:1px solid var(--line);padding-top:3px}
+.rrow.val.unk{color:var(--unk)}
+.note{font-size:13.5px;color:var(--ink2);margin-top:9px;background:var(--panel2);padding:8px 11px}
+.src{font-size:12px;color:var(--muted);margin-top:9px}
+@media (max-width:560px){
+.card{grid-template-columns:1fr}
+.card.yr{border-right:0;border-bottom:1px solid var(--line);text-align:left;padding:10px 16px;display:flex;align-items:baseline;gap:10px}
+.card.yr.y{font-size:24px}
+.rrow{grid-template-columns:1fr;gap:2px}
+.rrow.lab{border-top:0;padding-top:6px}
+.rrow.val{border-top:0;padding-top:0}
+}
+/* compact rows for concert era */
+.card.compact.show{font-size:16px}
+.card.compact.yr.y{font-size:24px}
+
+/* ---------- chart ---------- */
+.chartbox{background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);padding:18px 16px 10px;margin-top:14px}
+.chartbox h3{margin:0 0 2px;font-size:16px;font-weight:900}
+.chartbox.sub{font-size:13px;color:var(--ink2);margin:0 0 8px}
+.chartbox svg{width:100%;height:auto;display:block}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12.5px;color:var(--ink2);margin-top:6px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.dot{width:11px;height:11px;border-radius:50%;display:inline-block}
+
+/* ---------- tables & lists ---------- */
+.vtable{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);margin-top:14px;font-size:14.5px}
+.vtable th,.vtable td{border-bottom:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+.vtable th{background:var(--panel2);font-weight:900;font-size:13px}
+.vtable tr:last-child td{border-bottom:0}
+@media (max-width:640px){
+.vtable,.vtable tbody,.vtable tr,.vtable td{display:block;width:100%}
+.vtable thead{display:none}
+.vtable td{border-bottom:0;padding:6px 12px}
+.vtable tr{border-bottom:1px solid var(--line);padding:8px 0}
+.vtable td:first-child{font-weight:900}
+}
+ul.plain{margin:12px 0 0;padding-left:1.3em;color:var(--ink2);font-size:14.5px}
+ul.plain li{margin-top:7px}
+ul.plain strong{color:var(--ink)}
+ol.sources{margin:12px 0 0;padding-left:1.4em;font-size:13.5px;color:var(--ink2)}
+ol.sources li{margin-top:8px;overflow-wrap:anywhere}
+ol.sources.sn{font-weight:700;color:var(--ink)}
+footer{margin-top:56px;border-top:2px solid var(--line2);padding-top:14px;color:var(--muted);font-size:12.5px}
+.noresult{display:none;background:var(--panel);border:1px dashed var(--line2);padding:22px;text-align:center;color:var(--ink2);margin-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="kicker">福岡大学附属大濠高等学校 吹奏楽部</div>
+<h1>57年の記録 <span class="yrs lat">1970–2026</span><br />ショータイトルと大会結果の全アーカイブ</h1>
+<p class="lead">
+結論から言うと、今回の調査で<strong>何らかの大会記録を確認できたのは57年中55年分</strong>。
+マーチングバンド全国大会（JMBA）のショータイトルは<strong>1997〜2026年の30年中29年分</strong>、
+全国大会の結果は<strong>20回分</strong>を個別に出典つきで確認できた。
+一方で、広く言われる「通算22回出場・金賞10回」とは<strong>2回分（うち金賞1回）の食い違い</strong>が残る。
+取れなかった項目は推測で埋めず、すべて「未確認」と明記した。
+</p>
+<p class="meta">調査日：2026年10月27日（JST）／ 出典は各カードと末尾の一覧に明記 ／ 2026年の全国大会は12月開催予定のため未開催</p>
+</header>
+
+<div class="stats" aria-label="調査サマリー">
+<div class="stat red">
+<div class="num lat">29<small> / 30年</small></div>
+<div class="cap">JMBAショータイトルを確認（1997〜2026年）。不明は2022年のみ</div>
+</div>
+<div class="stat">
+<div class="num lat">20<small> 回</small></div>
+<div class="cap">JMBA全国大会の結果を個別確認（2001〜2025年）。うち金賞9回</div>
+</div>
+<div class="stat">
+<div class="num lat">13<small> 年連続</small></div>
+<div class="cap">全国大会への連続出場（2013〜2025年、継続中）。2026年は「REDLINE」で挑む</div>
+</div>
+<div class="stat">
+<div class="num lat">55<small> / 57年</small></div>
+<div class="cap">何らかの記録を確認できた年。全面未確認は1979年・1980年のみ</div>
+</div>
+</div>
+
+<div class="alert" role="note">
+<h2>通算記録には食い違いがある</h2>
+<p>
+Wikipedia・ebravoは「2025年現在 <strong>13年連続・通算22回出場・金賞10回</strong>」とする。
+しかしMarching Library等で1回ずつ確認できたのは<strong>20回・金賞9回</strong>。
+2013年以前にあと2回（うち金賞1回）の出場が記録に残っていない計算になる。
+</p>
+<p>
+2012年は出場団体一覧で<strong>不出場を確認済み</strong>。残る候補は1997〜2000年・2006〜2008年・2010年のいずれか2年だが、
+特定には至らなかった（詳細は「<a href="#verify">通算記録の検証</a>」）。
+</p>
+</div>
+
+<div class="toolbar">
+<div class="row">
+<label class="search">
+<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg>
+<input id="q" type="search" placeholder="年・ショー名・曲名で検索（例：2019、マスク、REDLINE）" aria-label="年表を検索" />
+</label>
+<button class="chip" data-f="all" aria-pressed="true">すべて</button>
+<button class="chip" data-f="gold" aria-pressed="false">JMBA全国・金賞</button>
+<button class="chip" data-f="national" aria-pressed="false">JMBA全国出場（確認済）</button>
+<button class="chip" data-f="upper" aria-pressed="false">座奏で県・支部・全国へ</button>
+<button class="chip" data-f="unknown" aria-pressed="false">JMBA結果が未確認の年</button>
+</div>
+<nav class="eras" aria-label="時代へジャンプ">
+<a href="#era-recent">2013–2026 連続出場期</a>
+<a href="#era-early">1997–2012 ショー判明期</a>
+<a href="#era-concert">1970–1996 座奏の時代</a>
+<a href="#verify">通算記録の検証</a>
+<a href="#unknown">未確認事項</a>
+<a href="#sources">出典一覧</a>
+</nav>
+<div class="count" id="count" aria-live="polite"></div>
+</div>
+
+<section id="chart-sec" aria-label="得点推移">
+<div class="sec-head"><h2>JMBA全国大会 得点の推移</h2><span class="range lat">2014–2025</span></div>
+<p class="sec-note">点数が公表資料で確認できた年だけを打点した。2020年は特別開催（e-Marching）で点数なし、2021年は金賞だが点数は今回の出典では未確認のため、線はそこで途切れる。最高は2025年の91.85点（銀賞）、金賞の最高は2014年の91.38点。</p>
+<div class="chartbox">
+<h3>全国大会の得点（100点満点）</h3>
+<p class="sub">縦軸は85〜93点の範囲に拡大している（点差を見るための拡大であり、0点起点ではない）。</p>
+<div id="chart"></div>
+<div class="legend">
+<span><i class="dot" style="background:var(--gold)"></i>金賞の年</span>
+<span><i class="dot" style="background:#7d8899"></i>銀賞の年</span>
+<span>出典：JMBA公式結果PDF／Marching Library／Drum Corps Fun</span>
+</div>
+</div>
+</section>
+
+<section id="era-recent">
+<div class="sec-head"><h2>連続出場期</h2><span class="range lat">2013–2026</span></div>
+<p class="sec-note">2013年の「ICE」から全国大会への連続出場が始まった。2023年のタイトルは出典により「BLOOD」（ebravo・現地取材）と「Monster」（Marching Library）が食い違うため両論併記した。2026年の全国大会は12月開催予定。</p>
+<div id="list-recent"></div>
+</section>
+
+<section id="era-early">
+<div class="sec-head"><h2>ショータイトル判明期</h2><span class="range lat">1997–2012</span></div>
+<p class="sec-note">Marching Libraryにショータイトルが残る最古は1997年。この期間はタイトルは判明しても全国大会の結果が追えない年が多い。2012年は不出場を確認済み——連続出場の起点が2013年であることの裏付けにもなっている。</p>
+<div id="list-early"></div>
+</section>
+
+<section id="era-concert">
+<div class="sec-head"><h2>座奏の時代</h2><span class="range lat">1970–1996</span></div>
+<p class="sec-note">この期間のマーチングの記録は出典が残っていない（Marching Libraryの記録は1997年開始）。中心は全日本吹奏楽コンクール（座奏）で、Musica Bellaのデータベースに地区大会から追える。1970〜80年代は西部支部大会への進出も複数回ある。参考として、範囲直前の1969年——座奏で唯一の全国大会出場（5位）——も末尾に置いた。</p>
+<div id="list-concert"></div>
+</section>
+
+<div class="noresult" id="noresult">条件に合う年が見つからなかった。検索語か絞り込みを変えてみてほしい。</div>
+
+<section id="verify">
+<div class="sec-head"><h2>通算記録の検証</h2></div>
+<p class="sec-note">「何年連続・通算何回」という数字は出典によって食い違う。主張と、個別記録との照合結果を並べる。</p>
+<table class="vtable">
+<thead><tr><th>主張</th><th>出典</th><th>個別記録との照合</th></tr></thead>
+<tbody>
+<tr>
+<td>2024年12月時点で12年連続・通算21回目</td>
+<td>ebravo vol.31</td>
+<td>2013年起点の連続出場と整合する</td>
+</tr>
+<tr>
+<td>2023年12月時点で11年連続・通算20回目</td>
+<td>ebravo vol.19</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>2025年現在 13年連続・通算22回・金賞10回</td>
+<td>Wikipedia 学校記事</td>
+<td>個別確認は<strong>20回・金賞9回</strong>。2回（金1回）分が未収録とみられる</td>
+</tr>
+<tr>
+<td>全日本マーチングコンテスト 全国大会 通算2回／九州大会金賞 通算16回以上</td>
+<td>Wikipedia 学校記事</td>
+<td>該当年・内訳は未特定</td>
+</tr>
+</tbody>
+</table>
+<p class="sec-note">
+不足分2回の候補年は1997〜2000年・2006〜2008年・2010年のいずれか（2012年は不出場を確認済み。2010年は金賞団体集に含まれないため、少なくとも金賞ではない）。
+JMBA公式の古い結果資料や当時の九州予選記録がウェブ上で確認できず、特定には至らなかった。
+なお高校偏差値.netには「金賞5回・銀賞7回」という古い集計もあり、通算値は出典により異なる。
+</p>
+<p class="sec-note">
+もう1件、伝記との不整合がある。卒業生・藤重佳久の伝記には「高校1年時に吹奏楽コンクール全国大会に出場」とあるが、
+Musica Bella DBでは1970年は支部大会止まりで、全国出場は1969年（5位）のみと記録されている。この点は未確認のまま注記する。
+</p>
+</section>
+
+<section id="unknown">
+<div class="sec-head"><h2>未確認事項</h2></div>
+<p class="sec-note">出典が取れず、推測で埋めなかった項目の一覧。</p>
+<ul class="plain">
+<li><strong>JMBA全国大会 2013年以前の残り2回分</strong>：1997〜2012年はタイトルのみ判明し、全国出場の有無・賞は2012年（不出場）を除き未確認。</li>
+<li><strong>1970〜1996年のマーチング活動全般</strong>：ショータイトル・結果とも出典なし（Marching Libraryの記録は1997年開始）。</li>
+<li><strong>2022年のJMBAショータイトル</strong>、および一部年の編成区分（確認できたのは2011年 小編成、2005・2019・2021・2023・2024年 中編成、2025年 大編成）。</li>
+<li><strong>全日本マーチングコンテスト</strong>：全国出場2回の該当年、2022年以前の県・九州結果の大半。過去のコミカルなテーマ「熱闘甲子園」「大濠杯ダービーステークス」「怪盗大濠からの予告状」は知られるが、年次は出典に明記がなく未確認（ebravo vol.31）。</li>
+<li><strong>座奏</strong>：1979・1980・2000・2025年の記録（DB未収録。2025年は未入力の可能性あり）、1987・1990・1991・1993年の県大会の賞。</li>
+<li><strong>学校公式サイト</strong>（ohori.ed.jp）には部活動の歴代結果ページを確認できなかった。</li>
+</ul>
+</section>
+
+<section id="sources">
+<div class="sec-head"><h2>出典一覧</h2></div>
+<p class="sec-note">すべて2026年10月27日（JST）に閲覧。＝Marching Library、＝Musica Bella 吹奏楽コンクールデータベース。</p>
+<ol class="sources">
+<li><span class="sn">Marching Library 団体ページ</span> — 1997〜2026年のショータイトルと全国結果の大半<br /><a href="https://marching-library.com/groups/fukudai-ohori/" target="_blank" rel="noopener">https://marching-library.com/groups/fukudai-ohori/</a></li>
+<li><span class="sn">Marching Library 第40回イベントページ</span> — 出場団体一覧に大濠なし（2012年不出場の確認）<br /><a href="https://marching-library.com/events/2012-jmba-day2/" target="_blank" rel="noopener">https://marching-library.com/events/2012-jmba-day2/</a></li>
+<li><span class="sn">Marching Library 第49回イベントページ</span> — 2021年 Pulse・中編成・金賞<br /><a href="https://marching-library.com/events/event/2021-jmba-day2/" target="_blank" rel="noopener">https://marching-library.com/events/event/2021-jmba-day2/</a></li>
+<li><span class="sn">Marching Library 第50回イベントページ</span> — 2022年 銀賞・91.13点<br /><a href="https://marching-library.com/events/2022-jmba-day2/" target="_blank" rel="noopener">https://marching-library.com/events/2022-jmba-day2/</a></li>
+<li><span class="sn">Marching Library 第51回イベントページ</span> — 2023年 中編成の出場団体リスト<br /><a href="https://marching-library.com/events/2023-jmba-day2/" target="_blank" rel="noopener">https://marching-library.com/events/2023-jmba-day2/</a></li>
+<li><span class="sn">JMBA公式 第53回結果PDF</span> — 2025年 大編成・91.85点・銀賞<br /><a href="http://dwgkpr9vzw3bh.cloudfront.net/jma/kekka/1779785478017042500.pdf" target="_blank" rel="noopener">http://dwgkpr9vzw3bh.cloudfront.net/jma/kekka/1779785478017042500.pdf</a></li>
+<li><span class="sn">JMBA公式 第52回結果PDF</span> — 2024年 中編成・89.05点・銀賞<br /><a href="https://dwgkpr9vzw3bh.cloudfront.net/jma/52MChampionships/1734258555019311200.pdf" target="_blank" rel="noopener">https://dwgkpr9vzw3bh.cloudfront.net/jma/52MChampionships/1734258555019311200.pdf</a></li>
+<li><span class="sn">ebravo vol.19（第51回大会レポート）</span> — 2023年 BLOOD・銀賞・11年連続20回目<br /><a href="https://ebravo.jp/archives/157890" target="_blank" rel="noopener">https://ebravo.jp/archives/157890</a></li>
+<li><span class="sn">ebravo vol.31（大濠特集）</span> — 2024年 SOL・銀賞・12年連続21回目、マーチングコンテスト九州金賞・テーマ<br /><a href="https://ebravo.jp/archives/183135" target="_blank" rel="noopener">https://ebravo.jp/archives/183135</a></li>
+<li><span class="sn">ebravo vol.42</span> — 2025年テーマ「ウロボロス」<br /><a href="https://ebravo.jp/archives/203778" target="_blank" rel="noopener">https://ebravo.jp/archives/203778</a></li>
+<li><span class="sn">Wikipedia 福岡大学附属大濠中学校・高等学校</span> — 通算22回・金10回・マーチングコンテスト全国2回等の主張<br /><a href="https://ja.wikipedia.org/wiki/福岡大学附属大濠中学校・高等学校" target="_blank" rel="noopener">https://ja.wikipedia.org/wiki/福岡大学附属大濠中学校・高等学校</a></li>
+<li><span class="sn">Drum Corps Fun 第47回結果</span> — 2019年 金賞・テーマ表記「ANBA∠ANCE」<br /><a href="https://drumcorpsfun.jp/championship/1160/" target="_blank" rel="noopener">https://drumcorpsfun.jp/championship/1160/</a></li>
+<li><span class="sn">Drum Corps Fun 第33回結果</span> — 2005年 金賞・ヒーロー見参！！<br /><a href="https://drumcorpsfun.jp/championship/117/" target="_blank" rel="noopener">https://drumcorpsfun.jp/championship/117/</a></li>
+<li><span class="sn">洗高応援隊ブログ（第47回全結果）</span> — 2019年 中編成・金賞<br /><a href="https://arakououentai.hatenablog.com/entry/2019/12/16/100253" target="_blank" rel="noopener">https://arakououentai.hatenablog.com/entry/2019/12/16/100253</a></li>
+<li><span class="sn">palsmusic 第39回金賞団体集</span> — 2011年 小編成・Android・金賞（HM-8）<br /><a href="https://palsmusic.jp/smp/item/PABD-1218.html" target="_blank" rel="noopener">https://palsmusic.jp/smp/item/PABD-1218.html</a></li>
+<li><span class="sn">palsmusic 第38回金賞団体集</span> — 2010年に大濠なし（金賞ではないことの確認）<br /><a href="https://palsmusic.jp/smp/item/PABD-1117.html" target="_blank" rel="noopener">https://palsmusic.jp/smp/item/PABD-1117.html</a></li>
+<li><span class="sn">gakufu.co.jp 第40回金賞団体集</span> — 2012年に大濠なし<br /><a href="https://www.gakufu.co.jp/collections/cddvd-series__dvd-genre__-dvd//products/dvd565" target="_blank" rel="noopener">https://www.gakufu.co.jp/collections/cddvd-series__dvd-genre__-dvd//products/dvd565</a></li>
+<li><span class="sn">Musica Bella 団体ページ</span> — 座奏の全記録（1964〜2024年）<br /><a href="https://www.musicabella.jp/groups/view/151" target="_blank" rel="noopener">https://www.musicabella.jp/groups/view/151</a></li>
+<li><span class="sn">九州吹奏楽連盟 第43回九州マーチングコンテスト結果PDF</span> — 2025年 九州 金賞・非代表<br /><a href="https://www.kyushu-ba.org/wp-content/uploads/2025/10/13f2c6410bce2b8556a5b962103548a6.pdf" target="_blank" rel="noopener">https://www.kyushu-ba.org/wp-content/uploads/2025/10/13f2c6410bce2b8556a5b962103548a6.pdf</a></li>
+<li><span class="sn">朝日新聞（第44回九州マーチングコンテスト）</span> — 2026年 九州 金賞・非代表<br /><a href="https://www.asahi.com/articles/ASVBC3J9RVBCTIPE00WM.html" target="_blank" rel="noopener">https://www.asahi.com/articles/ASVBC3J9RVBCTIPE00WM.html</a></li>
+<li><span class="sn">マーチング手帳（2023年九州・福岡県マーチングコンテスト）</span> — 2023年 県 金賞・九州 銀賞<br /><a href="https://maido-march.com/?p=2479" target="_blank" rel="noopener">https://maido-march.com/?p=2479</a></li>
+<li><span class="sn">mononofu-senses（第53回JMBA九州予選結果）</span> — 2025年 九州予選 金賞・代表<br /><a href="https://mononofu-senses.net/blog/2025/11/10/第53回-マーチングバンド全国大会九州予選／第30回/" target="_blank" rel="noopener">https://mononofu-senses.net/blog/2025/11/10/第53回-マーチングバンド全国大会九州予選／第30回/</a></li>
+<li><span class="sn">福岡県吹奏楽連盟 2017コンクール高校支部PDF</span> — 2017年 座奏 金賞・非代表<br /><a href="https://www.fukuoka-ba.org/wp-content/uploads/2017/07/2017コンクール高校支部.pdf" target="_blank" rel="noopener">https://www.fukuoka-ba.org/wp-content/uploads/2017/07/2017コンクール高校支部.pdf</a></li>
+<li><span class="sn">JMBA九州支部 全九州カラーガード・パーカッション結果PDF</span> — 2025年6月の各部門金賞<br /><a href="https://jmba-kyushu.net/2025_0622_recap.pdf" target="_blank" rel="noopener">https://jmba-kyushu.net/2025_0622_recap.pdf</a></li>
+</ol>
+</section>
+
+<footer>
+本ページは公開資料のみに基づく調査のまとめであり、学校・部活動の公式発表ではない。記録の誤りに気づいた場合は、出典のある資料と照合のうえで更新する前提で読んでほしい。調査日：2026年10月27日。
+</footer>
+</div>
+
+<script>
+/* ============ data (出典：調査報告 2026-10-27) ============ */
+var DATA = [
+/* ---- 2013–2026 連続出場期 ---- */
+{y:2026, era:"recent", show:"REDLINE", lat:1, award:"pending", badge:"全国は12月",
+jmba:"全国大会は2026年12月開催予定（未開催）。M協福岡 金賞／九州カラーガード 金賞・審査員特別賞／九州パーカッション団体 金賞・最優秀賞",
+mc:"福岡県大会 金賞・代表（テーマ「ホリ・ストーリー」）／九州大会 金賞（全国代表ならず）",
+cc:null, src:"Marching Library 団体ページ／朝日新聞"},
+{y:2025, era:"recent", show:"Ouroboros", lat:1, award:"silver", badge:"銀賞 91.85",
+jmba:"大編成 銀賞・91.85点（第53回）。九州予選 金賞・代表",
+mc:"九州大会 金賞（全国代表ならず）", cc:null,
+note:"全九州カラーガード・パーカッションコンテスト（2025-06-22）：パーカッション・アンサンブル 金賞・最優秀賞、カラーガード 金賞、パーカッション 金賞。ショータイトルは「ウロボロス」。",
+src:"JMBA公式結果PDF／ebravo vol.42／九州吹連公式PDF／JMBA九州支部PDF"},
+{y:2024, era:"recent", show:"SOL", lat:1, award:"silver", badge:"銀賞 89.05",
+jmba:"中編成 銀賞・89.05点（第52回）。12年連続・通算21回目の出場",
+mc:"九州大会 金賞。テーマ「パイレーツ・オブ・ホリビアン」、使用曲は樽屋雅徳《マゼランの未知なる大陸への挑戦》",
+cc:"地区 銀賞（課題曲：行進曲「勇気の旗を掲げて」／自由曲：Crossfire – November 22・樽屋雅徳）",
+src:"JMBA公式結果PDF／ebravo vol.31／Musica Bella DB"},
+{y:2023, era:"recent", show:"BLOOD", lat:1, award:"silver", badge:"銀賞 89.78",
+showalt:"タイトルは出典により競合：ebravo（現地取材）は「BLOOD」、Marching Libraryは「Monster」",
+jmba:"中編成 銀賞・89.78点（第51回、点数はMarching Libraryによる）。11年連続・通算20回目の出場",
+mc:"福岡県大会 金賞／九州大会 銀賞",
+cc:"地区 金賞・代表 → 県大会 銀賞（課題曲：レトロ／自由曲：マードックからの最後の手紙）",
+src:"ebravo vol.19／Marching Library／マーチング手帳／Musica Bella DB"},
+{y:2022, era:"recent", show:null, award:"silver", badge:"銀賞 91.13",
+jmba:"銀賞・91.13点（第50回）。ショータイトルは未確認",
+mc:null,
+cc:"地区 辞退（課題曲：サーカスハットマーチ／自由曲：セント・アンソニー・ヴァリエーション）",
+src:"Marching Library／Musica Bella DB"},
+{y:2021, era:"recent", show:"Pulse", lat:1, award:"gold", badge:"金賞",
+jmba:"中編成 金賞（第49回）", mc:null,
+cc:"地区 金賞（課題曲：トイズ・パレード／自由曲：《レ・ミゼラブル》）",
+src:"Marching Library／Musica Bella DB"},
+{y:2020, era:"recent", show:"HANDS", lat:1, award:"special", badge:"特別開催",
+jmba:"グッドビジュアル賞（コロナ禍の特別開催 e-Marching）",
+mc:null, cc:"記録なし（コンクール中止年）",
+src:"Marching Library"},
+{y:2019, era:"recent", show:"UNBA∠ANCE", lat:1, award:"gold", badge:"金賞 89.43",
+showalt:"表記ゆれあり：Drum Corps Funは「ANBA∠ANCE」と表記",
+jmba:"中編成 金賞・89.43点（第47回）", mc:null,
+cc:"地区 銀賞（課題曲：行進曲「道標の先に」／自由曲：春になって、王たちが戦いに出るに及んで）",
+src:"Drum Corps Fun／洗高応援隊ブログ／Marching Library／Musica Bella DB"},
+{y:2018, era:"recent", show:"波の息吹と俺達の心", award:"silver", badge:"銀賞 87.2",
+jmba:"銀賞・87.2点（第46回）", mc:null,
+cc:"地区 銀賞（課題曲：コンサート・マーチ「虹色の未来へ」／自由曲：アンティフォナーレ）",
+note:"2006年と同タイトル。12年越しに同じテーマで全国の舞台に戻った。",
+src:"Marching Library／Musica Bella DB"},
+{y:2017, era:"recent", show:"光の射す方へ", award:"gold", badge:"金賞 89.75",
+jmba:"中編成 金賞・89.75点（第45回）", mc:null,
+cc:"地区 金賞（県連資料でも金賞・代表ならず。課題曲：マーチ「春風の通り道」／自由曲：二つの交響的断章）",
+src:"Marching Library／福岡県吹連PDF／Musica Bella DB"},
+{y:2016, era:"recent", show:"Network", lat:1, award:"gold", badge:"金賞 90.88",
+jmba:"金賞・90.88点（第44回）", mc:null,
+cc:"地区 金賞（課題曲：マーチ・スカイブルー・ドリーム／自由曲：典礼の舞曲）",
+src:"Marching Library／Musica Bella DB"},
+{y:2015, era:"recent", show:"CHAKRA", lat:1, award:"gold", badge:"金賞 88.95",
+jmba:"金賞・88.95点（第43回）", mc:null,
+cc:"地区 銀賞（課題曲：マーチ「春の道を歩こう」／自由曲：空中都市「マチュピチュ」）",
+src:"Marching Library／Musica Bella DB"},
+{y:2014, era:"recent", show:"MIЯROR", lat:1, award:"gold", badge:"金賞 91.38",
+jmba:"金賞・91.38点（第42回）。金賞の中では最高得点", mc:null,
+cc:"地区 銀賞（課題曲：コンサートマーチ「青葉の街で」／自由曲：祈りとトッカータ）",
+src:"Marching Library／Musica Bella DB"},
+{y:2013, era:"recent", show:"ICE", lat:1, award:"silver", badge:"銀賞",
+jmba:"銀賞（第41回）。13年連続出場はこの年から始まった", mc:null,
+cc:"地区 銀賞（課題曲：エンターテインメント・マーチ／自由曲：ザ・レッド・マシーン）",
+src:"Marching Library／Musica Bella DB"},
+
+/* ---- 1997–2012 ショー判明期 ---- */
+{y:2012, era:"early", show:"LAST TRAIN HOME", lat:1, award:"none", badge:"全国 不出場",
+jmba:"全国大会は不出場（第40回出場団体一覧に大濠なし。金賞団体集にも含まれない）",
+mc:null,
+cc:"地区 銅賞（課題曲：よろこびへ歩きだせ／自由曲：レッドライン・タンゴ）",
+src:"Marching Library 第40回イベントページ／Musica Bella DB"},
+{y:2011, era:"early", show:"Android", lat:1, award:"gold", badge:"金賞",
+jmba:"小編成 金賞（第39回、HM-8）", mc:null,
+cc:"地区 銀賞（課題曲：マーチ「ライヴリー アヴェニュー」／自由曲：エアーリンク）",
+src:"palsmusic 金賞団体集／Marching Library／Musica Bella DB"},
+{y:2010, era:"early", show:"AZTECA", lat:1, award:"unknown", badge:"全国 結果未確認",
+jmba:"全国大会の結果は未確認（金賞団体集には含まれず、少なくとも金賞ではない）",
+mc:null,
+cc:"地区 銀賞（課題曲：オーディナリー・マーチ／自由曲：ブルー・シェイズ）",
+src:"Marching Library／palsmusic／Musica Bella DB"},
+{y:2009, era:"early", show:"GLADIATOR", lat:1, award:"gold", badge:"金賞",
+jmba:"金賞（第37回）", mc:null,
+cc:"地区 銀賞（課題曲：コミカル★パレード／自由曲：マスク）",
+src:"Marching Library／Musica Bella DB"},
+{y:2008, era:"early", show:"Businessman", lat:1, award:"unknown", badge:"全国 結果未確認",
+jmba:"全国大会の結果は未確認", mc:null,
+cc:"地区 銀賞（課題曲：ブライアンの休日／自由曲：祈りとトッカータ）",
+src:"Marching Library／Musica Bella DB"},
+{y:2007, era:"early", show:"Z", lat:1, award:"unknown", badge:"全国 結果未確認",
+jmba:"全国大会の結果は未確認", mc:null,
+cc:"地区 銀賞（課題曲：ピッコロマーチ／自由曲：紅炎の鳥）",
+src:"Marching Library／Musica Bella DB"},
+{y:2006, era:"early", show:"波の息吹と俺達の心", award:"unknown", badge:"全国 結果未確認",
+jmba:"全国大会の結果は未確認", mc:null,
+cc:"地区 銀賞（課題曲：海へ…／自由曲：海の男たちの歌）",
+note:"2018年にも同じタイトルが使われている。",
+src:"Marching Library／Musica Bella DB"},
+{y:2005, era:"early", show:"ヒーロー見参!!", award:"gold", badge:"金賞",
+jmba:"中編成 金賞（第33回）", mc:null,
+cc:"地区 銀賞（課題曲：マーチ「春風」／自由曲：Foojin-雷神）",
+src:"Drum Corps Fun 第33回結果／Marching Library／Musica Bella DB"},
+{y:2004, era:"early", show:"Oceans", lat:1, award:"silver", badge:"銀賞",
+jmba:"銀賞（第32回）", mc:null,
+cc:"地区 銀賞（課題曲：「風之舞」／自由曲：ローマの祭りより）",
+src:"Marching Library／Musica Bella DB"},
+{y:2003, era:"early", show:"My Spanish Heart", lat:1, award:"silver", badge:"銀賞",
+jmba:"銀賞（第31回）", mc:null,
+cc:"地区 銀賞（課題曲：マーチ「ベスト・フレンド」／自由曲：アメリカの騎士）",
+src:"Marching Library／Musica Bella DB"},
+{y:2002, era:"early", show:"Gladiator", lat:1, award:"silver", badge:"銀賞",
+jmba:"銀賞（第30回）", mc:null,
+cc:"地区 銀賞（自由曲：たなばた）",
+note:"2009年の「GLADIATOR」とは別年の別ショーとして記録されている。",
+src:"Marching Library／Musica Bella DB"},
+{y:2001, era:"early", show:"大濠BOYSスーパースター", award:"silver", badge:"銀賞",
+jmba:"銀賞（第29回）", mc:null,
+cc:"地区 金賞（課題曲：行進曲「SLが行く」／自由曲：《メリー・ウィドウ》セレクション）",
+src:"Marching Library／Musica Bella DB"},
+{y:2000, era:"early", show:"Magical Cats", lat:1, award:"unknown", badge:"全国 結果未確認",
+jmba:"全国大会の結果は未確認", mc:null, cc:"記録なし",
+src:"Marching Library／Musica Bella DB"},
+{y:1999, era:"early", show:"Ocean Knights", lat:1, award:"unknown", badge:"全国 結果未確認",
+jmba:"全国大会の結果は未確認", mc:null,
+cc:"地区 金賞（自由曲：海の男たちの歌）",
+src:"Marching Library／Musica Bella DB"},
+{y:1998, era:"early", show:"Space Knights", lat:1, award:"unknown", badge:"全国 結果未確認",
+jmba:"全国大会の結果は未確認", mc:null,
+cc:"地区 銀賞（自由曲：交響的断章）",
+src:"Marching Library／Musica Bella DB"},
+{y:1997, era:"early", show:"ザ・露西亜", award:"unknown", badge:"全国 結果未確認",
+jmba:"全国大会の結果は未確認（Marching Libraryに残る最古のショー記録）", mc:null,
+cc:"地区 銅賞（自由曲：メトセラII）",
+src:"Marching Library／Musica Bella DB"},
+
+/* ---- 1970–1996 座奏の時代 ---- */
+{y:1996, era:"concert", cc:"地区 銅賞（自由曲：カンタベリー・コラール）", src:"Musica Bella DB"},
+{y:1995, era:"concert", cc:"地区 銀賞（自由曲：エル・カミーノ・レアル）", src:"Musica Bella DB"},
+{y:1994, era:"concert", cc:"地区 金賞（自由曲：歌劇《雪娘》より 軽業師の踊り）", src:"Musica Bella DB"},
+{y:1993, era:"concert", upper:1, cc:"地区 金賞・代表 → 県大会出場（自由曲：紅炎の鳥）", src:"Musica Bella DB"},
+{y:1992, era:"concert", cc:"地区 金賞（自由曲：バレエ音楽《ガイーヌ》）", src:"Musica Bella DB"},
+{y:1991, era:"concert", upper:1, cc:"地区 金賞・代表 → 県大会出場（自由曲：《三角帽子》）", src:"Musica Bella DB"},
+{y:1990, era:"concert", upper:1, cc:"地区 金賞・代表 → 県大会出場（自由曲：吹奏楽のための神話）", src:"Musica Bella DB"},
+{y:1989, era:"concert", cc:"地区 金賞（課題曲：ポップス・マーチ「すてきな日々」／自由曲：ローマの祭り）", src:"Musica Bella DB"},
+{y:1988, era:"concert", upper:1, cc:"地区 金賞・代表 → 県大会 金賞（課題曲：カーニバルのマーチ／自由曲：《ロメオとジュリエット》）", src:"Musica Bella DB"},
+{y:1987, era:"concert", upper:1, cc:"地区 金賞・代表 → 県大会出場（課題曲：マーチ「ハロー! サンシャイン」／自由曲：「ハムレット」への音楽）", src:"Musica Bella DB"},
+{y:1986, era:"concert", cc:"地区 銅賞（課題曲：嗚呼!／自由曲：大草原の歌）", src:"Musica Bella DB"},
+{y:1985, era:"concert", cc:"地区 金賞（課題曲：シンフォニック・ファンファーレとマーチ／自由曲：パンチネロ）", src:"Musica Bella DB"},
+{y:1984, era:"concert", cc:"地区 棄権（課題曲：土俗的舞曲／自由曲：ムーアサイド組曲）", src:"Musica Bella DB"},
+{y:1983, era:"concert", cc:"地区 金賞（課題曲：キューピッドのマーチ／自由曲：《オセロ》）", src:"Musica Bella DB"},
+{y:1982, era:"concert", cc:"地区 銀賞（課題曲：カプリチオ／自由曲：《運命の力》序曲）", src:"Musica Bella DB"},
+{y:1981, era:"concert", cc:"地区 出場（賞の記録なし。課題曲C：シンフォニック・マーチ／自由曲：ダイヤモンド・ヴァリエーション）", src:"Musica Bella DB"},
+{y:1980, era:"concert", cc:null, allunk:1, src:"Musica Bella DBに記録なし"},
+{y:1979, era:"concert", cc:null, allunk:1, src:"Musica Bella DBに記録なし"},
+{y:1978, era:"concert", upper:1, cc:"西部支部大会 銀賞（課題曲：ジュビラーテ／自由曲：マスク）", src:"Musica Bella DB"},
+{y:1977, era:"concert", cc:"地区 金賞（課題曲：バーレスク／自由曲：パッサカリア）", src:"Musica Bella DB"},
+{y:1976, era:"concert", cc:"地区 銅賞（課題曲：協奏的序曲／自由曲：幻想交響曲より）", src:"Musica Bella DB"},
+{y:1975, era:"concert", cc:"地区 銀賞（課題曲：練習曲／自由曲：交響曲《メキシコの祭り》）", src:"Musica Bella DB"},
+{y:1974, era:"concert", upper:1, cc:"地区 金賞・代表 → 支部大会 銅賞（課題曲：シンフォニア／自由曲：朝鮮民謡の主題による変奏曲）", src:"Musica Bella DB"},
+{y:1973, era:"concert", cc:"地区 銀賞（課題曲：アラベスク／自由曲：センテニアル・ファンファーレ・マーチ）", src:"Musica Bella DB"},
+{y:1972, era:"concert", cc:"地区 銀賞（課題曲：シンフォニック・ファンファーレ／自由曲：ロッキー・ポイント・ホリデイ）",
+note:"当時在校生の大村雅朗が指揮者として記録されている。", src:"Musica Bella DB"},
+{y:1971, era:"concert", cc:"地区 4位（課題曲：行進曲《太陽の下に》／自由曲：聖歌と祭り）", src:"Musica Bella DB"},
+{y:1970, era:"concert", upper:1, cc:"地区 特別推薦・代表 → 支部大会出場（課題曲：音楽祭のプレリュード／自由曲：シンフォニア・ノビリッシマ）", src:"Musica Bella DB"},
+{y:1969, era:"concert", ref:1, upper:1, cc:"地区 優勝・代表 → 支部 1位・代表 → 全国大会 5位（課題曲：《南極点への序曲》／自由曲：トッカータ・マルツィアーレ）",
+note:"座奏で唯一の全国大会出場。調査範囲（1970年〜）の直前だが、部の原点として外せないため参考に収録した。", src:"Musica Bella DB"}
+];
+
+/* ============ chart data: JMBA全国大会の得点（確認できた年のみ） ============ */
+var SCORES = [
+{y:2014, s:91.38, a:"gold"}, {y:2015, s:88.95, a:"gold"},
+{y:2016, s:90.88, a:"gold"}, {y:2017, s:89.75, a:"gold"},
+{y:2018, s:87.20, a:"silver"}, {y:2019, s:89.43, a:"gold"},
+{y:2022, s:91.13, a:"silver"}, {y:2023, s:89.78, a:"silver"},
+{y:2024, s:89.05, a:"silver"}, {y:2025, s:91.85, a:"silver"}
+];
+
+function buildChart(){
+var W=720,H=308, L=46,R=14,T=26,B=38;
+var x0=2014, x1=2025, v0=85, v1=93;
+function X(y){ return L + (y-x0)/(x1-x0)*(W-L-R);}
+function Y(v){ return T + (v1-v)/(v1-v0)*(H-T-B);}
+var dark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+var grid = dark? "#2a3442": "#d3dae3";
+var txt = dark? "#8a95a5": "#6b7686";
+var line = dark? "#c3ccd9": "#3c4656";
+var gold = dark? "#d9a83c": "#a8740a";
+var silv = "#7d8899";
+var out = ['<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="JMBA全国大会の得点推移グラフ">'];
+[85,87,89,91,93].forEach(function(v){
+out.push('<line x1="'+L+'" y1="'+Y(v)+'" x2="'+(W-R)+'" y2="'+Y(v)+'" stroke="'+grid+'" stroke-width="1"/>');
+out.push('<text x="'+(L-8)+'" y="'+(Y(v)+4)+'" text-anchor="end" font-size="11.5" fill="'+txt+'" font-family="Oswald,sans-serif">'+v+'</text>');
+});
+for(var y=x0; y<=x1; y++){
+out.push('<text x="'+X(y)+'" y="'+(H-14)+'" text-anchor="middle" font-size="11.5" fill="'+txt+'" font-family="Oswald,sans-serif">'+y+'</text>');
+}
+/* segments split at gaps (2020, 2021 have no confirmed score) */
+var runs=[[0,5],[6,9]];
+runs.forEach(function(r){
+var pts=[];
+for(var i=r[0]; i<=r[1]; i++){ pts.push(X(SCORES[i].y).toFixed(1)+","+Y(SCORES[i].s).toFixed(1));}
+out.push('<polyline points="'+pts.join(" ")+'" fill="none" stroke="'+line+'" stroke-width="2"/>');
+});
+SCORES.forEach(function(d){
+var c = d.a==="gold"? gold: silv;
+out.push('<circle cx="'+X(d.y)+'" cy="'+Y(d.s)+'" r="5.5" fill="'+c+'" stroke="'+(dark?"#141a22":"#ffffff")+'" stroke-width="2"/>');
+out.push('<text x="'+X(d.y)+'" y="'+(Y(d.s)-13)+'" text-anchor="middle" font-size="12.5" font-weight="600" fill="'+c+'" font-family="Oswald,sans-serif">'+d.s.toFixed(2)+'</text>');
+});
+out.push('<text x="'+X(2020.5)+'" y="'+(H-28)+'" text-anchor="middle" font-size="11" fill="'+txt+'">2020・2021は点数未確認</text>');
+out.push('</svg>');
+document.getElementById("chart").innerHTML = out.join("");
+}
+
+/* ============ rendering ============ */
+function esc(s){ return s.replace(/&/g,"&amp;").replace(/</g,"&lt;");}
+function rowVal(lab, val, unkText){
+if(val){ return '<div class="rrow"><div class="lab">'+lab+'</div><div class="val">'+esc(val)+'</div></div>';}
+return '<div class="rrow"><div class="lab">'+lab+'</div><div class="val unk">'+unkText+'</div></div>';
+}
+function cardHTML(d){
+var h = '<article class="card'+(d.era==="concert"?" compact":"")+'" data-y="'+d.y+'">';
+h += '<div class="yr"><div class="y lat">'+d.y+'</div><div class="era">'+(d.ref?"参考収録":(d.era==="concert"?"座奏の時代":(d.era==="early"?"ショー判明期":"連続出場期")))+'</div></div>';
+h += '<div class="body">';
+if(d.era!=="concert"){
+h += '<div class="showline">';
+if(d.show){ h += '<div class="show'+(d.lat?" lat":"")+'">'+esc(d.show)+'</div>';}
+else{ h += '<div class="show none">ショータイトル未確認</div>';}
+if(d.badge){ h += '<span class="badge '+(d.award||"")+'">'+esc(d.badge)+'</span>';}
+h += '</div>';
+if(d.showalt){ h += '<div class="showalt">'+esc(d.showalt)+'</div>';}
+} else if(d.ref){
+h += '<div class="showline"><div class="show">座奏・全国大会 5位の年</div><span class="badge special">参考</span></div>';
+} else if(d.allunk){
+h += '<div class="showline"><div class="show none">記録なし（全面未確認）</div></div>';
+}
+h += '<div class="results">';
+if(d.era!=="concert"){
+h += rowVal("JMBA 全国大会", d.jmba, "未確認");
+h += rowVal("マーチングコンテスト", d.mc, "未確認");
+h += rowVal("座奏コンクール", d.cc, "未確認");
+} else {
+h += rowVal("座奏コンクール", d.cc, "未確認（DBに記録なし）");
+h += rowVal("マーチング", null, "未確認（この期間の記録は出典なし）");
+}
+h += '</div>';
+if(d.note){ h += '<div class="note">'+esc(d.note)+'</div>';}
+h += '<div class="src">出典：'+esc(d.src)+'</div>';
+h += '</div></article>';
+return h;
+}
+
+var lists = { recent:document.getElementById("list-recent"), early:document.getElementById("list-early"), concert:document.getElementById("list-concert")};
+DATA.forEach(function(d){
+var div=document.createElement("div");
+div.innerHTML = cardHTML(d);
+var el = div.firstChild;
+el._d = d;
+lists[d.era].appendChild(el);
+});
+
+/* ============ filter & search ============ */
+var filter="all";
+function matches(d){
+if(filter==="gold") return d.award==="gold";
+if(filter==="national") return ["gold","silver","special"].indexOf(d.award)>=0;
+if(filter==="upper") return!!d.upper;
+if(filter==="unknown") return d.award==="unknown";
+return true;
+}
+function apply(){
+var q = document.getElementById("q").value.trim().toLowerCase();
+var shown=0;
+DATA.forEach(function(d){
+var el = lists[d.era].querySelector('[data-y="'+d.y+'"]');
+var text = (d.y+" "+(d.show||"")+" "+(d.jmba||"")+" "+(d.mc||"")+" "+(d.cc||"")+" "+(d.note||"")).toLowerCase();
+var ok = matches(d) && (!q || text.indexOf(q)>=0);
+el.style.display = ok? "": "none";
+if(ok) shown++;
+});
+["era-recent","era-early","era-concert"].forEach(function(id){
+var sec=document.getElementById(id);
+var any=false;
+sec.querySelectorAll(".card").forEach(function(c){ if(c.style.display!=="none") any=true;});
+sec.style.display = any? "": "none";
+});
+document.getElementById("chart-sec").style.display = (filter==="all" &&!q)? "": "none";
+document.getElementById("noresult").style.display = shown? "none":"block";
+document.getElementById("count").textContent = (filter==="all" &&!q)? "": ("表示中："+shown+"年分（全"+DATA.length+"年）");
+}
+document.querySelectorAll(".chip").forEach(function(b){
+b.addEventListener("click", function(){
+document.querySelectorAll(".chip").forEach(function(x){ x.setAttribute("aria-pressed","false");});
+b.setAttribute("aria-pressed","true");
+filter=b.getAttribute("data-f");
+apply();
+});
+});
+document.getElementById("q").addEventListener("input", apply);
+
+buildChart();
+if(window.matchMedia){
+var mq = window.matchMedia("(prefers-color-scheme: dark)");
+if(mq.addEventListener) mq.addEventListener("change", buildChart);
+}
+</script>
+</body>
+</html>
